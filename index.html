@@ -1,7 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="css/main.css" rel="stylesheet">
+	<title>Dynamic Multi-Layer Algebra (DMLA)</title>
+</head>
 <body>
-<h1>Dynamic Multi-Layer Algebra webpage</h1>
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+<h1>Dynamic Multi-Layer Algebra (DMLA)<br /><br /></h1>
+<p>DMLA is a multi-level instantiation technique based on Abstract State Machines (ASM). DMLA consists of two major parts: The first part (the Core) defines the modeling structure, namely an abstract state machine and a set of connected functions that specify the transition logic between the states. The second part (the Bootstrap) is an initial set of modeling constructs, built-in model elements (e.g. built-in types) that are necessary to adapt the abstract modeling&nbsp;structure to practical applications. The Bootstrap also contains the formal definition of the precise instantiation mechanism via reified validation constructs. The two parts have been intentionally kept separate since the algebraic part is structurally self-contained and isolated from the peculiarities of the different Bootstraps. Hence, any particular Bootstrap genuinely seeds the concrete meta-modeling capabilities derived from the generic DMLA. This may be considered to be one of its most novel aspects when compared to the unlimited and universal modeling capability other approaches, like the potency notion provides at all meta-levels. In effect, the proper selection of Bootstrap entities fully determines the expressibility of DMLA's modeling capabilities available on lower meta-levels.</p>
+<p style="text-align: justify;">Contact: dmla (at) aut.bme.hu</p>
+<h2 style="text-align: justify;">Multi-level modeling playground (MLMP)</h2>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">MLMP is a validating, modular and general multi-level modeling playground built upon DMLA. Using MLMP, one can specify the underlying structure and semantics of multi-level constructs, like the different variants of the potency notion. This makes it possible to experiment with novel multi-level ideas without having to build the underlying tool chain. Notion specification is governed by our high level, textual domain-specific language, the Multi-Level Specification Language (MLSL). MLMP also supports the creation of domain models on which existing construct specifications can be tested and evaluated in practice.</p>
+<p style="text-align: justify;">The specification of several multi-level constructs along with the brief syntax definition of MLSL can be found at: <a href="https://github.com/bmeaut/MLMP">https://github.com/bmeaut/MLMP</a><span style="color: #a4001e; font-family: Georgia, 'Times New Roman', serif;">&nbsp;</span></p>
+<h2>Presentations</h2>
+<p style="text-align: justify;">&nbsp;</p>
+<ul>
+<li>Models 2018 - Poster of Multi 2018 workshop paper (<a href="Papers/Models_2018_DMLA.pdf">link</a>)</li>
+<li>Multi 2018 - Presentation (<a href="Papers/Multi2018_Presentation.pdf">link</a>)</li>
+<li>Modelsward 2018 - Poster (<a style="" href="Papers/Modelsward_2018_EFOP.PDF">link</a><span style="">)</span></li>
+<li>4th International Workshop on Multi-Level Modeling @ MODELS 2017 - Presentation (<a style="" href="Papers/MULTI_2017.pdf">link</a><span style="">)</span></li>
+</ul>
+<p style="text-align: justify;"><span style=""><br /></span></p>
+<h2>Bootstraps and examples:</h2>
+<ul>
+<li>Short description of the current bootstrap:&nbsp;<a style="text-align: justify; " href="Papers/DMLA_Elements_web.pdf">link</a>&nbsp;+ paper about the Bootstrap: <a href="Papers/AACS19_paper_4.pdf">link</a></li>
+<li>Default bootstrap&nbsp;</li>
+<ul>
+<li>XML serialization (<a style="" href="Papers/bootstrap.zip">link</a><span style="">)</span></li>
+<li>DMLAScript (<a href="Papers/bootstrap_dmla.zip">link</a>)</li>
+</ul>
+<li>Detailed example - Person&nbsp;</li>
+<ul>
+<li>DMLAScript with detailed description (<a href="Papers/person_def.dmla.txt">Meta definitions</a>, <a href="Papers/person.dmla.txt">Instances</a>)</li>
+<li>XML representation (<a href="Papers/person_def.xml">Meta definitions</a>, <a href="Papers/person_valid.xml">Valid instances only</a>, <a href="Papers/person_invalid.xml">All instances</a>) - can be combined with bootstrap XMLs</li>
+<li>Full XML representation (Bootstrap+example) (<a href="Papers/dmla_withPerson_valid.zip">Valid instances only</a>, <a href="Papers/dmla_withPerson_invalid.zip">All instances</a>)&nbsp;</li>
+</ul>
+<li><span style="">The Bicycle challenge (2018)</span></li>
+<ul>
+<li><span style="">DMLAScript with comments (&nbsp;<a href="Papers/bicycle.txt">Instances</a>)</span></li>
+<li><span style="">XML representation (&nbsp;<a href="Papers/bootstrap_with_bicycle.zip">Complete</a>- including Bootstrap and bicycle entities)</span></li>
+</ul>
+<li>The Process challenge (2019)</li>
+<ul>
+<li>DMLAScript with comments (<a href="Papers/process.txt">Instances</a>)</li>
+<li>XML representation (&nbsp;<a style="" href="Papers/processchallenge.zip">Complete</a><span style="">- including Bootstrap and domain entities)</span></li>
+</ul>
+<li>Mapping of the potency notion (2019)</li>
+<ul>
+<li>Mapping layer in DMLA - <a href="Papers/potency_classic.dmla.txt">DMLAScript</a></li>
+</ul>
+</ul>
+<p>&nbsp;<span style="color: #a4001e; font-family: Georgia, 'Times New Roman', serif; ">&nbsp;</span></p>
+<h2 style="text-align: justify;">Papers&nbsp;</h2>
+<ol>
+<li><span style="">Z. Theisz and G. Mezei, "Towards a novel meta-modeling approach for dynamic multi-level instantiation" in Automation and Applied Computer Science Workshop, Budapest, Hungary, 2015. (</span><a style="" href="Papers/aacs2015_TheiszMezei.pdf">aacs2015_TheiszMezei</a><span style="">)</span></li>
+<li><span style="">Z. Theisz and G. Mezei, "An Algebraic Instantiation Technique Illustrated by Multilevel Design Patterns" in MULTI@MoDELS, Ottawa, Canada, 2015. (</span><a style="" href="http://ceur-ws.org/Vol-1505/p6.pdf">http://ceur-ws.org/Vol-1505/p6.pdf</a><span style="">)</span></li>
+<li><span style="">Z. Theisz and G. Mezei, "Multi-level Dynamic Instantiation for Resolving Node-edge Dichotomy" in Proceedings of the 4th International Conference on Model-Driven Engineering and Software Development, Rome, Italy, 2016.&nbsp;</span></li>
+<li><span style="">D. Urb&aacute;n, Z. Theisz and G. Mezei, "Formalism for Static Aspects of Dynamic Metamodeling" Periodica Polytechnica Electrical Engineering and Computer Science, vol. 61, no. 1, pp. 34-47, 2017. (</span><a style="" href="https://pp.bme.hu/eecs/article/view/9547"><cite>https://pp.bme.hu/eecs/article/view/9547</cite></a><span style="">)</span></li>
+<li><span style="">D. Urban, Z. Theisz and G. Mezei, "Self-describing Operations for Multi-level Meta-modeling", MODELSWARD 2018, Madeira, Portugal (</span><a style="" href="http://www.scitepress.org/Papers/2018/66561/66561.pdf">http://www.scitepress.org/Papers/2018/66561/66561.pdf</a><span style="">)</span></li>
+<li><span style="">G. Mezei, Z. Theisz, D. Urb&aacute;n, S. B&aacute;csi: The bicycle challenge in DMLA, where validation means correct modeling. MODELS Workshops 2018: 643-652 (</span><a style="" href="http://ceur-ws.org/Vol-2245/multi_paper_2.pdf">http://ceur-ws.org/Vol-2245/multi_paper_2.pdf</a><span style="">)</span></li>
+<li><span style="">G. Mezei</span><span style="">, Z. Theisz, D. Urb&aacute;n, S. B&aacute;csi, F. A. Somogyi, D. Palatinszky: "A bootstrap for self-describing, self-validating multi-layer metamodeling"&nbsp;in Automation and Applied Computer Science Workshop, Budapest, Hungary, 2019.&nbsp;(<a href="Papers/AACS19_paper_4.pdf">AACS19_paper_4.pdf</a>)</span></li>
+<li><span style="">Z. Theisz, S. B&aacute;csi, G. Mezei, F. A. Somogyi, D. Palatinszky: "By multi-layer to multi-level modeling" in Multi@Models, M&uuml;nchen, Germany, 2019. (</span><a style="" href="Papers/Multi2019_TNumber.pdf">Multi2019_TNumber</a><span style="">)</span></li>
+<li><span style="">F. A. Somogyi, G. Mezei, D. Urb&aacute;n, Z. Theiss, S. B&aacute;csi and D. Palatinszky, "Multi-level Modeling with DMLA - A Contribution to the MULTI Process Challenge,"&nbsp;<em>2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C)</em>, Munich, Germany, 2019, pp. 119-127, doi:&nbsp;</span><a class="nova-e-link nova-e-link--color-inherit nova-e-link--theme-decorated" style="" href="https://www.researchgate.net/deref/http%3A%2F%2Fdx.doi.org%2F10.1109%2FMODELS-C.2019.00022?_sg%5B0%5D=TCGaykfvgqNtVli35zwFJ2dejRS6jTguLXyBtyr6O5x53engLhoOPYnUU5ka9Odv1SXH-wGcz_XktpVnfRfSvUPWCQ.z5Y0CEPBqayfwQZ3lhGS3BYeJEzPp8FfpDdydCtWn0luwliEzunXuhyCubmZTdJ6hmDz7iMoDo3SC2karVfofw">10.1109/MODELS-C.2019.00022</a></li>
+<li><span style="">G. Mezei, F. A. Somogyi, Z. Theisz, D. Urb&aacute;n and S. B&aacute;csi: "Towards Mainstream Multi-level Meta-modeling",&nbsp;</span><span style="">Proceedings of the 7th International Conference on Model-Driven Engineering and Software Development (</span><span style="">MODELSWARD 2019</span><span style=""><span style="">), Set&uacute;bal, Portug&aacute;lia: SciTePress, (2019) pp. 481-488., doi:&nbsp;</span></span><a class="nova-e-link nova-e-link--color-inherit nova-e-link--theme-decorated" style="" href="https://www.researchgate.net/deref/http%3A%2F%2Fdx.doi.org%2F10.5220%2F0007580404810488?_sg%5B0%5D=pE4uvmQVIdXrIAgf1PVOB4Gx10HdS9OXnPFBFfRuJN_Ne8AJ4QgiEfnIlaEeet1dsG1Yq7p_c3kWReQoXJtwW1xYoQ.R1eQlumTjKA1CbCL_B5_l8ovTZHIMW9W2GPk6TklKYtPDIbSxUkaFzC5mo7dH9NXBteUKKOGn2S0IZlErt3sIw">10.5220/0007580404810488</a></li>
+<li><span style="">G. Mezei,&nbsp;F. A. Somogyi,&nbsp;Z. Theisz, D. Palatinszky and S. B&aacute;csi:&nbsp;&ldquo;Towards Flexible, Rigorous Refinement in Metamodeling.&rdquo;&nbsp;</span><em style="">2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C)</em><span style="">&nbsp;(2019): 455-459., doi:&nbsp;<a href="https://doi.org/10.1109/MODELS-C.2019.00073" target="_blank">10.1109/MODELS-C.2019.0007</a></span></li>
+<li><span style="">F. A. Somogyi, G. Mezei, D. Urb&aacute;n, Z. Theisz and S. B&aacute;csi ,</span><span style="">&nbsp;"Challenges in the field of multi-level modeling"</span><span style="">&nbsp;</span><span style="">in Automation and Applied Computer Science Workshop, Budapest, Hungary, 2019.,&nbsp;pp. 48-59</span></li>
+<li><span style=""><span style="">F. A. Somogyi, G. Mezei, Z. Theisz, S. B&aacute;csi and D. Palatinszky, "Multi-level Modeling without Classical Modeling Facilities", Proceedings of the 8th International Conference on Model-Driven Engineering and Software Development - Volume 1: MODELSWARD 2020, pp. 393-400, 2020 , Valletta, Malta, doi:&nbsp;</span></span><a class="nova-e-link nova-e-link--color-inherit nova-e-link--theme-decorated" style="" href="https://www.researchgate.net/deref/http%3A%2F%2Fdx.doi.org%2F10.5220%2F0008973503930400?_sg%5B0%5D=VFry_ucPRgGqT_udNe_FFX-Xq6dpyr4UNfV5729EIBduW9o70YzfKI_ZJH_SPVdCheHK207nPIS8jOZWFIDzaXQXGA.FWmg8q618ZWCys9djrVRItD6YeIHifMa2mpq-XUqgzMXlMtYXANibIKNE3ZLJGwisP64gqsJ5GTfJraBJo2exA">10.5220/0008973503930400</a></li>
 
+<li><span style=""><span style="">G. Mezei, M. Hidv&eacute;gi and N. Somogyi , "DMLA 3.0: Towards an Industrial
+Multi-Layer Modeling Framework", in Automation and Applied Computer Science Workshop, Budapest, Hungary, 2021., <a>(</span><a style="" href="Papers/AACS2021_DMLA3.pdf">AACS2021_DMLA3</a><span style="">)</a></li>
+
+</ol>
+</div>
 </body>
 </html>
