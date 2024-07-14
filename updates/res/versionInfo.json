@@ -1,0 +1,23 @@
+{
+  "extension": [
+      {
+        "id": "beta",
+        "most_recent": "0.1.0",
+        "also_available": []
+      }
+    ],
+  "image": [
+      {
+        "id": "default",
+        "most_recent": "0.0.2",
+        "also_available": ["0.0.1"]
+      }
+    ],
+  "launcher": [
+      {
+        "id": "beta",
+        "most_recent": "0.1.2",
+        "also_available": []
+      }
+    ]
+}
