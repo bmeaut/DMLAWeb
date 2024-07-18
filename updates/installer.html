@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>The DMLA Launcher and installer</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h2 id="the-dmla-launcher-and-installer">The DMLA Launcher and installer</h2>
+<p>The DMLA launcher (dmla.exe) is responsible for installing,
+updating and managing components of the DMLA tooling, and starting
+the execution/validation of D# files/workspaces.</p>
+<h3 id="getting-started">Getting started</h3>
+<p>To get started, download the dmla.exe executable, and start
+it without any arguments - this will start the installation
+process.</p>
+<p>The DMLA toolset consists of 3 components:</p>
+<ul>
+<li>the launcher (dmla.exe)</li>
+<li>a docker image used by the dockerized runtime (dmlateam/dmla-prod)</li>
+<li>a VS Code extension that provides editor features</li>
+</ul>
+<p>The installer prompts you to install all dependencies, and
+installs all the required components.</p>
+<p>Every subcommand of the <code>dmla</code> command supports the <code>-h</code> or<code>--help</code> flags
+that display a help menu specific to the subcommand.</p>
+<h3 id="running-code">Running code</h3>
+<p>To run code, use the <code>dmla run</code> command, or the start
+options provided by the VS Code extension.</p>
+<p>The <code>dmla run</code> command accepts the following arguments:</p>
+<ul>
+<li><code>--nobootstrap</code>              Turns off the bundled bootstrap.</li>
+<li><code>--dap &lt;PORT&gt;</code>               Starts debugging, waits for a debugger to be attached to the specified port.</li>
+<li><code>--source &lt;FILES&gt;...</code>        Specifies the domain files (or directories) to be loaded.</li>
+<li><code>--entrypoint &lt;ENTRYPOINT&gt;</code>  Specifies the operation to start.</li>
+<li><code>--showcmd</code>                  Displays the container launch command before launching it.</li>
+<li><code>--useprofilinginstrument</code>   Turns on DMLA profiling.</li>
+</ul>
+<h4 id="examples">Examples</h4>
+<p>To validate a workspace, one can simply run
+<code>dmla run .</code>.</p>
+<p>To start a specific operation (in this example<code> WarehousePackage.Init</code>), use
+<code>dmla run --source &lt;FILES&gt; --entrypoint WarehousePackage.Init</code></p>
+<p>To turn on profiling, add the <code>--useprofilinginstrument</code> flag.</p>
+<p>To start a specific operation, specify the name of the
+entry point using the</p>
+<h3 id="keeping-the-components-up-to-date">Keeping the components up to date</h3>
+<p>Use the <code>dmla update all</code> command to update all components.</p>
+
+            
+            
+        </body>
+        </html>
