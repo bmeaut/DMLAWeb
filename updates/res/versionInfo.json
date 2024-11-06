@@ -2,9 +2,10 @@
   "extension": [
       {
         "id": "beta",
-        "most_recent": "0.1.1",
+        "most_recent": "0.1.2",
         "also_available": [
-          "0.1.0"
+          "0.1.0",
+          "0.1.1"
         ]
       }
     ],
