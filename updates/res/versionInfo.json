@@ -19,8 +19,10 @@
   "launcher": [
       {
         "id": "beta",
-        "most_recent": "0.1.2",
-        "also_available": []
+        "most_recent": "0.1.3",
+        "also_available": [
+          "0.1.2"
+        ]
       }
     ]
 }
