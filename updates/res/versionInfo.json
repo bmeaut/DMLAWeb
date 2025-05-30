@@ -18,14 +18,14 @@
     ],
   "language": [
       {
-        "id": "default",
+        "id": "beta",
         "most_recent": "0.0.1",
         "also_available": []
       }
     ],
   "bootstrap": [
       {
-        "id": "default",
+        "id": "beta",
         "most_recent": "0.0.1",
         "also_available": []
       }
