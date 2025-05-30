@@ -16,6 +16,20 @@
         "also_available": ["0.0.1"]
       }
     ],
+  "language": [
+      {
+        "id": "default",
+        "most_recent": "0.0.1",
+        "also_available": []
+      }
+    ],
+  "bootstrap": [
+      {
+        "id": "default",
+        "most_recent": "0.0.1",
+        "also_available": []
+      }
+    ],
   "launcher": [
       {
         "id": "beta",
